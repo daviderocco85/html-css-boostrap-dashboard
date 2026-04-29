@@ -16,7 +16,8 @@ Add a new dashboard page containing a form for adding new books.
 
 # Technical notes
 
-A JavaScript file is included for Bootstrap form validation
+A JavaScript file is included for Bootstrap form validation.
+
 
 
 # HTML-CSS-BOOSTRAP-DASHBOARD screenshot example
