@@ -1,0 +1,24 @@
+body {
+  min-width: 320px;
+}
+
+code {
+  color: #0d6efd; 
+}
+/* Search bar settings in navbar*/
+.custom-search {
+  background-color: #fff;
+  color: gray;
+}
+
+.custom-search::placeholder {
+  color: gray;
+  opacity: 1;
+}
+
+.custom-search:focus {
+  background-color: #fff;
+  color: black;
+ 
+}
+

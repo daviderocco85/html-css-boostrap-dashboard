@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New-book</title>
+     <!--Boostrap link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!--css-->
+    <link rel="stylesheet" href="css/style.css"/>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"/>
+</head>
+<body>
+    <!--navbar-->
+     <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="/assets/img/duck.png" alt="Bootstrap" width="50" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <!--Navigation to dashboard page-->
+                  <a class="nav-link active text-white" aria-current="page" href="index.html">Catalogo Libri</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Anagrafica Utenti</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Storico Prestiti</a>
+                </li>
+                <li class="nav-item">
+                   <a class="nav-link" href="#">Help</a>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2 custom-search" type="search" placeholder="Cerca..." aria-label="Search" />
+                <button class="btn btn-outline-light" type="submit">Cerca</button>
+            </form>
+          </div>
+        </div>
+    </nav>
+    <!--form-->
+    <div class="container py-4">
+            <form class="row g-3 needs-validation" novalidate>
+                <div class="d-flex justify-content-between align-items-center">
+                    <h1 class="text-capitalize fs-2 fw-semibold m-0">Nuovo Libro</h1>
+                </div>   
+                <!--Author Name-->
+                <div class="col-6">
+                    <label for="authorName" class="form-label fw-medium">Nome Autore</label>
+                    <input type="text" class="form-control" name="authorName" id="authorName" placeholder="Inserisci il nome dell'autore"  aria-describedby="authorNameFeedback" required>
+                    <div class="invalid-feedback" id="authorNameFeedback"></div>
+                </div>
+                <!--Author Surname-->
+                <div class="col-6">
+                    <label for="authorSurName" class="form-label fw-medium">Cognome Autore</label>
+                    <input type="text" class="form-control" name="authorSurName" id="authorSurName" placeholder="Inserisci il cognome dell'autore" aria-describedby="authorSurNameFeedback" required>
+                    <div class="invalid-feedback" id="authorSurNameFeedback"></div>
+                </div>
+                 <!--Book title-->
+                <div class="col-12">
+                    <label for="bookTitle" class="form-label fw-medium">Titolo</label>
+                    <input type="text" class="form-control" name="bookTitle" id="bookTitle" aria-describedby="bookTitleFeedback" placeholder="Inserisci il titolo del libro" required>
+                    <div class="form-text" id="bookTitleHelper">
+                    Titolo versione italiana
+                    </div>
+                    <div class="invalid-feedback" id="bookTitleFeedback"></div>
+                </div>
+                 <!--Book type-->
+                <div class="col-md-4">
+                    <label for="bookType" class="form-label fw-medium">Genere</label>
+                    <select id="bookType" name="bookType" class="form-select" required>
+                        <option value="" disabled selected>Scegli il genere</option>
+                        <option value="horror">Horror</option>
+                        <option value="giallo">Giallo</option>
+                        <option value="fantasy">Fantasy</option>
+                        <option value="biografia">Biografia</option>
+                    </select>
+                    <div class="invalid-feedback" id="bookTypeFeedback">
+                        Devi selezionare un genere
+                   </div>
+                </div>
+                 <!--Publication year-->
+                <div class="col-md-4">
+                    <label for="publicationYear" class="form-label fw-medium">Anno di Pubblicazione</label>
+                    <input type="number" class="form-control" name="publicationYear" id="publicationYear" placeholder="Inserisci l'anno">   
+                </div>
+                <!--ISBN code-->
+                 <div class="col-md-4">
+                    <label for="isbnCode" class="form-label fw-medium">ISBN#</label>
+                    <input type="text" class="form-control" name="isbnCode" id="isbnCode" placeholder="Inserisci il codice ISBN#">
+                </div>
+                 <div class="col-12">
+                  <hr class="mt-4">
+                 </div>
+                <!--Textarea Note-->
+                <div class="col-12">
+                   <label for="bookNote" class="form-label fw-medium">Note</label>
+                    <textarea class="form-control" name="bookNote" id="bookNote" placeholder="Inserisci eventuali note sul libro" style="height: 100px"></textarea>
+                </div>
+                <!--Checkbox-->
+                <div class="col-12">                  
+                    <div class="form-check">
+                        <input class="form-check-input" name="aivableDigitally" type="checkbox" id="aivableDigitally">
+                        <label class="form-check-label" for="aivableDigitally">
+                            Disponibile anche in digitale
+                        </label>
+                    </div>
+                </div>
+                <!--Button submit-->
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Aggiungi Libro</button>
+                </div>
+          </form>
+   </div>
+     <!--JavaScript bundle Popper-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+    <!--form JS validation-->
+    <script src="js/formValidation.js"></script>
+</body>
+</html>
