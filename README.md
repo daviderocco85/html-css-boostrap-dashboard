@@ -17,7 +17,7 @@ Add a new dashboard page containing a form for adding new books.
 # Technical notes
 
 A JavaScript file is included for Bootstrap form validation.
-
+The pages are linked to each other through the a tag Aggiungi Libro in index.html and the a tag Catalogo libri link in the navbar of new-book.html.
 
 
 # HTML-CSS-BOOSTRAP-DASHBOARD screenshot example
