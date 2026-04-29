@@ -27,4 +27,10 @@ A JavaScript file is included for Bootstrap form validation
 #### Desktop
 ![Html-css-boostrap-dashboard](assets/screenshots/desktop.png)
 
+# New book page form screenshot example
+#### Mobile
+![Html-css-boostrap-dashboard](assets/screenshots/mobile-new-book.png)
+#### Desktop
+![Html-css-boostrap-dashboard](assets/screenshots/desktop-new-book.png)
+
  
