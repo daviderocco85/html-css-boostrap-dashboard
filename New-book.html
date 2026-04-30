@@ -54,22 +54,28 @@
                 <div class="col-6">
                     <label for="authorName" class="form-label fw-medium">Nome Autore</label>
                     <input type="text" class="form-control" name="authorName" id="authorName" placeholder="Inserisci il nome dell'autore"  aria-describedby="authorNameFeedback" required>
-                    <div class="invalid-feedback" id="authorNameFeedback"></div>
+                    <div class="invalid-feedback" id="authorNameFeedback">
+                     Il nome deve avere minimo 2 caratteri 
+                    </div>
                 </div>
                 <!--Author Surname-->
                 <div class="col-6">
                     <label for="authorSurName" class="form-label fw-medium">Cognome Autore</label>
                     <input type="text" class="form-control" name="authorSurName" id="authorSurName" placeholder="Inserisci il cognome dell'autore" aria-describedby="authorSurNameFeedback" required>
-                    <div class="invalid-feedback" id="authorSurNameFeedback"></div>
+                    <div class="invalid-feedback" id="authorSurNameFeedback">
+                       Il cognome deve avere minimo 2 caratteri 
+                    </div>
                 </div>
                  <!--Book title-->
                 <div class="col-12">
                     <label for="bookTitle" class="form-label fw-medium">Titolo</label>
                     <input type="text" class="form-control" name="bookTitle" id="bookTitle" aria-describedby="bookTitleFeedback" placeholder="Inserisci il titolo del libro" required>
                     <div class="form-text" id="bookTitleHelper">
-                    Titolo versione italiana
+                      Titolo versione italiana
                     </div>
-                    <div class="invalid-feedback" id="bookTitleFeedback"></div>
+                    <div class="invalid-feedback" id="bookTitleFeedback">
+                        Inserire un titolo valido
+                    </div>
                 </div>
                  <!--Book type-->
                 <div class="col-md-4">
@@ -82,18 +88,24 @@
                         <option value="biografia">Biografia</option>
                     </select>
                     <div class="invalid-feedback" id="bookTypeFeedback">
-                        Devi selezionare un genere
+                         Selezionare un genere
                    </div>
                 </div>
                  <!--Publication year-->
                 <div class="col-md-4">
                     <label for="publicationYear" class="form-label fw-medium">Anno di Pubblicazione</label>
-                    <input type="number" class="form-control" name="publicationYear" id="publicationYear" placeholder="Inserisci l'anno">   
+                    <input type="number" class="form-control" name="publicationYear" id="publicationYear" placeholder="Inserisci l'anno" min="1700" max="2026" required>
+                    <div class="invalid-feedback" id="publicationYearFeedback">
+                        Inserisci un anno di pubblicazione valido
+                    </div> 
                 </div>
                 <!--ISBN code-->
                  <div class="col-md-4">
                     <label for="isbnCode" class="form-label fw-medium">ISBN#</label>
-                    <input type="text" class="form-control" name="isbnCode" id="isbnCode" placeholder="Inserisci il codice ISBN#">
+                    <input type="text" class="form-control" name="isbnCode" id="isbnCode" placeholder="Inserisci il codice ISBN#" required minlength="10" maxlength="13" pattern="[0-9]+">
+                    <div class="invalid-feedback" id="isbnCodeFeedback">
+                      Inserisci un ISBN valido
+                    </div> 
                 </div>
                  <div class="col-12">
                   <hr class="mt-4">
